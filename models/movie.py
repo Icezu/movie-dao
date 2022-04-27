@@ -6,9 +6,9 @@ Base = declarative_base()
 class Movie(Base):
     __tablename__ = "movies"
     movie_id = Column(Integer, primary_key=True)
-    title = Column(Text, (30))
-    genre = Column(Text, (30))
-    director = Column(Text, (30))
+    title = Column(Text)
+    genre = Column(Text)
+    director = Column(Text)
     year = Column(Integer)
     runtime = Column(Integer)
 

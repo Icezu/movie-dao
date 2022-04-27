@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS movies (
+    movie_id INTEGER PRIMARY KEY,
+    title TEXT NOT NULL,
+    genre TEXT NOT NULL,
+    director TEXT NOT NULL,
+    year INTEGER NOT NULL,
+    runtime INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS user_rating (
+    user_id INTEGER PRIMARY KEY,
+    movie_id INTEGER NOT NULL,
+    rating FLOAT NOT NULL,
+    votes INTEGER NOT NULL,
+    FOREIGN KEY (movie_id) REFERENCES movies (movie_id)
+);

@@ -1,8 +1,8 @@
-from sqlalchemy import Session
+from sqlalchemy.orm import Session
 from models.user_rating import UserRating
 
-class MovieDao:
-    """DAO for movie model."""
+class UserRatingDao:
+    """DAO for UserRating model."""
 
     def __init__(self, session:Session):
         self.__session = session
