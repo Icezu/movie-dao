@@ -25,10 +25,10 @@ user_rating_dao = movie_db.get_user_rating_dao()
 
 # print(movie_dao.get_movies())
 
-print(user_rating_dao.get_rating())
-print(user_rating_dao.get_rating_by_id(1001))
+# print(user_rating_dao.get_rating())
+# print(user_rating_dao.get_rating_by_id(1001))
 
-new_user = UserRating(user_id=1051, movie_id=1, rating= 9.1, votes= 1265401)
-user_rating_dao.add_rating(new_user)
-print(user_rating_dao.get_rating_by_id(1051))
+# new_user = UserRating(user_id=1051, movie_id=1, rating= 9.1, votes= 1265401)
+# user_rating_dao.add_rating(new_user)
+# print(user_rating_dao.get_rating_by_id(1051))
 
