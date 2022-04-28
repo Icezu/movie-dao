@@ -11,6 +11,5 @@ CREATE TABLE IF NOT EXISTS user_rating (
     user_id INTEGER PRIMARY KEY,
     movie_id INTEGER NOT NULL,
     rating FLOAT NOT NULL,
-    votes INTEGER NOT NULL,
     FOREIGN KEY (movie_id) REFERENCES movies (movie_id)
 );

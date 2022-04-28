@@ -8,8 +8,7 @@ class UserRating(Base):
     user_id = Column(Integer, primary_key=True)
     movie_id = Column(Integer, ForeignKey("movies.movie_id"), nullable=False)
     rating = Column(Float)
-    votes = Column(Integer)
 
     def __repr__(self):
-        return f"UserRating(user_id={self.user_id}, movie_id={self.movie_id}, rating={self.rating}, votes={self.votes})"
+        return f"UserRating(user_id={self.user_id}, movie_id={self.movie_id}, rating={self.rating})"
     
