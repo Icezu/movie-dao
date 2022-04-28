@@ -21,9 +21,9 @@ class UserRatingDao:
         self.__session.commit()
         print("Rating added successfully.")
     
-    def update_rating(self, user_id, new_rating: float):
-        """Update user rating."""
-        find_rating = self.__session.query(UserRating).filter_by(user_id=user_id).first()
+    def update_rating(self, movie_id, user_id, new_rating: float):
+        """Update user's movie rating."""
+        find_rating = self.__session.query(UserRating).filter_by(movie_id=movie_id, user_id=user_id).first()
         find_rating.rating = new_rating
         self.__session.commit()
         print("User rating is updated successfully.")    
@@ -32,4 +32,5 @@ class UserRatingDao:
         """Delete user rating by user_id"""
         find_user_id = self.__session.query(UserRating).filter_by(user_id=user_id).first()
         self.__session.delete(find_user_id)
+        self.__session.commit()
         print("User rating deleted successfully.")

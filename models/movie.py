@@ -1,7 +1,6 @@
 from sqlalchemy import Integer, Column, Text
-from sqlalchemy.orm import declarative_base
-
-Base = declarative_base()
+from sqlalchemy.orm import relationship
+from .base import Base
 
 class Movie(Base):
     __tablename__ = "movies"
@@ -11,6 +10,8 @@ class Movie(Base):
     director = Column(Text)
     year = Column(Integer)
     runtime = Column(Integer)
+
+    user_rating = relationship("UserRating", back_populates="movies")
 
     def __repr__(self):
         return f"Movie(Movie_id={self.movie_id}, title={self.title}, genre={self.genre}, director={self.director}, year={self.year}, runtime={self.runtime})"

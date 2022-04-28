@@ -7,6 +7,8 @@ movie_db = MovieDatabase()
 movie_dao = movie_db.get_movie_dao()
 user_rating_dao = movie_db.get_user_rating_dao()
 
+## Movie
+
 # print(movie_dao.get_movies())
 # print(movie_dao.get_movie_by_id(1))
 # print(movie_dao.get_movie_by_title("Sing"))
@@ -23,13 +25,17 @@ user_rating_dao = movie_db.get_user_rating_dao()
 
 # movie_dao.delete_movie(51)
 
-# print(movie_dao.get_movies())
+## UserRating
 
 # print(user_rating_dao.get_rating())
-# print(user_rating_dao.get_rating_by_id(1001))
+# print(user_rating_dao.get_rating_by_id(1051))
 
 # new_user = UserRating(user_id=1051, movie_id=1, rating= 9.1)
 # print(new_user)
 # user_rating_dao.add_rating(new_user)
 # print(user_rating_dao.get_rating_by_id(1051))
 
+# user_rating_dao.update_rating(1, 1051, 10)
+# print(user_rating_dao.get_rating_by_id(1051))
+
+# user_rating_dao.delete_rating(1051)
