@@ -10,9 +10,9 @@ user_rating_dao = movie_db.get_user_rating_dao()
 ## Movie
 
 # print(movie_dao.get_movies())
-# print(movie_dao.get_movie_by_id(1))
-# print(movie_dao.get_movie_by_title("Sing"))
-# print(movie_dao.get_movie_by_genre("Comedy"))
+print(movie_dao.get_movie_by_id(1))
+print(movie_dao.get_movie_by_title("Sing"))
+print(movie_dao.get_movie_by_genre("Horror"))
 # print(movie_dao.get_movie_by_year(2016))
 
 # new_movie = Movie(movie_id=51, title="Dune", genre="Action", director="Denis Villeneuve", year=2021, runtime=155)

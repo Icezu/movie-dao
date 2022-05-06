@@ -19,10 +19,14 @@ class MovieDao:
         """Get movie by title."""
         return self.__session.query(Movie).filter_by(title=title).first()
     
-    def get_movie_by_genre(self, director: str):
-        """Get all movie made by director."""
+    def get_movie_by_genre(self, genre: str):
+        """Get all movie in the genre."""
+        return self.__session.query(Movie).filter_by(genre=genre).all()
+
+    def get_movie_by_director(self, director: str):
+        """Get all movie made by the director."""
         return self.__session.query(Movie).filter_by(director=director).all()
-    
+
     def get_movie_by_year(self, year: int):
         """Get all movies made in year."""
         return self.__session.query(Movie).filter_by(year=year).all()
